@@ -7,30 +7,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 
 
   <link rel="stylesheet" href="css/style.css">
-  <title>The Farmer's Market</title>
+  <title>Your Farmer's Market</title>
 </head>
 
 <body>
-  <header class="inner">
-    <h2><a href="index.html">
-        The Farmer's Market</a></h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="search.html">Search for Item</a>
-        </li>
-        <li>
-          <a href="add.html">Add Item</a>
-        </li>     
-      </ul>
-    </nav>
-  </header>
+    <header class="inner">
+        <div id="logo">
+            <h1><a href="index.html">Your Farmer's Market</a></h1>
+            <span></span>
+          </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <!-- <li>
+            <a href="search.html">Search for Item</a>
+          </li> -->
+          <li>
+            <a href="add.html">Add Item</a>
+          </li> 
+          <li>
+            <a href="signup.html">Account</a>
+          </li>    
+        </ul>
+      </nav>
+    </header>
+  
 
   <section id="add" class="container">
     <div class="form-wrap">
@@ -52,7 +59,7 @@
           <textarea name="description" id="description" class="input-box" placeholder="Is it organic? What quantity is it sold in? What makes it special?"
             rows="10" required></textarea>
         </div>
-        <input type="submit" value="Add Item!" class="btn btn-reverse">
+        <input type="submit" value="Add Item!" class="add-btn">
       </form>
     </div>
   </section>
