@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 :root {
-  --primary-color: #568c9b;
-  --primary-hover-color: #64a5b7;
-  --bg-color: #333;
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
 }
 
@@ -12,11 +9,47 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nothing You Could Do', cursive;
   margin: 0;
   color: #333;
-  background: url('../img/market.jpg') no-repeat center center fixed / cover;
+  background: url('../img/vegitables.jpg') no-repeat center center fixed / cover;
 }
+
+.header-overlay {
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:0;
+  background:#333;
+  opacity:0.5;
+}
+
+/* .v-container {
+  max-width:960px;
+  padding-left:1rem;
+  padding-right:1rem;
+  margin:auto;
+  text-align:center;
+  z-index: -10;
+}
+
+.fullscreen-video-wrap {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index: -10;
+}
+
+.fullscreen-video-wrap video {
+  min-height:100%;
+  min-width:100%;
+} */
+
 
 ul {
   list-style: none;
@@ -24,12 +57,13 @@ ul {
 }
 
 a {
-  color: #fff;
+  color:#fff;
   text-decoration: none;
+  font-family: 'Nothing You Could Do', cursive;
 }
 
 a:hover {
-  color: var(--primary-color);
+  color:  #ff4444;
 }
 
 .container {
@@ -54,7 +88,9 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 6rem;
+  padding: 0rem 6rem;
+  z-index: 1;
+  font-size: 1.75rem;
 }
 
 header nav ul {
@@ -65,17 +101,35 @@ header nav li {
   margin: 0 1rem;
 }
 
-/* Login Button Spacing */
-/*header nav li:last-child {
-  margin-left: -5px;
-}*/
-
 header.inner {
-  background: var(--bg-color);
-  border-bottom: 4px solid var(--primary-color);
+  background: transparent;
   position: relative;
-  box-shadow: var(--box-shadow);
 }
+
+#logo {
+    overflow: hidden;
+    opacity: 0.80;
+
+}
+
+#logo h1 {
+	background: #ff4444;
+	color: #fff;
+	border-radius: 6px;
+	font-family:'Nothing You Could Do', cursive;
+  font-weight: 400;
+  width: 175px;
+  height: 100px;
+  transform: skew(15deg);
+  padding-left: 1.5rem;
+  font-size: 2rem;
+}
+		
+#logo span {
+  font-weight: 800;
+}
+	
+
 
 /* Buttons */
 .btn {
@@ -91,19 +145,19 @@ header.inner {
   color: #fff;
 }
 
-.btn-reverse {
-  background: var(--primary-color);
-  border: 1px solid var(--primary-color);
+.add-btn {
+  color: #fff;
+  font-family:'Nothing You Could Do', cursive;
+  background: transparent;
+  border: none;
 }
-
-.btn-reverse:hover {
-  background: var(--primary-hover-color);
-  border: 1px solid var(--primary-hover-color);
+.add-btn:hover {
+  color: #ff4444;
 }
 
 /* Home Search */
 .search-wrap {
-  background: url('../img/market.jpg') no-repeat center center fixed / cover;
+  /* background: url('../img/market.jpg') no-repeat center center fixed / cover; */
   height: 100vh;
   width: 100%;
   padding: 1.3rem 3rem;
@@ -119,20 +173,25 @@ header.inner {
   color: #fff;
   margin: 0 0 1.5rem;
   text-align: center;
+  opacity: 0.95;
+
 }
 
 .search-form input[type='submit'] {
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
   color: #fff;
+  font-family: 'Nothing You Could Do', cursive;
   padding: 0 2rem;
   cursor: pointer;
   transition: all 0.8s;
+  opacity: 0.95;
+  font-weight: bold;
+
 }
 
 .search-form input[type='submit']:hover {
-  background: var(--primary-hover-color);
-  border: 1px solid var(--primary-hover-color);
+  background: #ff4444;
 }
 
 .search-form {
@@ -160,14 +219,28 @@ input[type='search'] {
   flex-basis: 600px;
 }
 
-/* Gigs */
+/* Food */
 .food {
-  background: var(--bg-color);
-  border-bottom: 4px solid var(--primary-color);
+  background: url('../img/blackboard.jpg');
   color: #fff;
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: var(--box-shadow);
+  border-radius: 2rem;
+  opacity: 0.95;
+  /* flex-wrap: wrap; */
+}
+
+.food:hover {
+  background: url('../img/yellow.jpg') no-repeat center / cover;
+  /* background-size: cover,
+  background-repeat:no-repeat; */
+  color: transparent;
+  padding: 1rem;
+  /* background-image: inherit;
+  background-size: cover; */
+  opacity: 1;
+
 }
 
 .food ul {
@@ -190,12 +263,13 @@ input[type='search'] {
 /* Form */
 .form-wrap {
   margin: auto;
-  background: var(--bg-color);
+  background: url('../img/blackboard.jpg');
   color: #fff;
   padding: 1rem 3rem 3rem;
   margin-top: 3rem;
-  border-bottom: 4px solid var(--primary-color);
   box-shadow: var(--box-shadow);
+  border-radius: 2rem;
+  opacity: 0.95;
 }
 
 .form-wrap.reg-form,
@@ -209,12 +283,12 @@ input[type='search'] {
   text-align: center;
 }
 
-.form-wrap .btn {
+.form-wrap .add-btn {
   margin-top: 1rem;
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 2rem;
 }
 
 label {
@@ -227,6 +301,7 @@ label {
   font-size: 18px;
   width: 100%;
   margin-bottom: 1.2rem;
+  border-radius: 0.25rem;
 }
 
 /* Tablets */
@@ -275,11 +350,12 @@ label {
 /* Smartphones */
 @media (max-width: 500px) {
   .container {
-    padding: 1rem;
+    padding: 0rem;
   }
 
   header nav li {
     margin: 0 10px;
+    font-size: 1.75rem;
   }
 
   .search-form {
@@ -304,3 +380,5 @@ label {
     width: 100%;
   }
 }
+
+
